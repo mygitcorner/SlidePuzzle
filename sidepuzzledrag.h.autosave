@@ -1,0 +1,31 @@
+#ifndef SIDEPUZZLEDRAG_H
+#define SIDEPUZZLEDRAG_H
+
+#include "direction.h"
+
+#include <QPointF>
+
+
+class SidePuzzleDrag
+{
+public:
+    SidePuzzleDrag();
+    
+    void startDrag(int row, int col, QPointF mousePos, Direction dir);
+    void updateDisplacement(QPointF mousePos);
+    void stopDrag();
+    
+    QPointF displacement() const;
+    bool isDragging() const;
+    int row() 
+    
+private:
+    QPointF m_startPos;
+    QPointF m_displacement;
+    Direction m_direction;
+    int m_row;
+    int m_col;
+    bool m_isDragging;
+};
+
+#endif // SIDEPUZZLEDRAG_H

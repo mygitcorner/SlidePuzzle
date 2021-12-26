@@ -1,0 +1,23 @@
+#include "sidepuzzledrag.h"
+
+SidePuzzleDrag::SidePuzzleDrag() :
+    m_direction(Direction::RIGHT),
+    m_isDragging(false)
+{
+}
+
+void SidePuzzleDrag::startDrag(int row, int col, QPointF mousePos, Direction dir)
+{
+    m_row = row;
+    m_col = col;
+}
+
+void SidePuzzleDrag::updateDisplacement(QPointF mousePos)
+{
+    
+}
+
+void SidePuzzleDrag::stopDrag()
+{
+    
+}
